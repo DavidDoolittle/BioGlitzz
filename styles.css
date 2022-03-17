@@ -80,6 +80,48 @@ article {
     aside {
         margin-left: 2%;
     }
+
+    .columns-desktop {
+        display: flex;
+    }
+}
+
+/* Glitz */
+
+.Glitz {
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #fff;
+    border: solid 1px #ccc;
+}
+
+.Glitz img {
+    width: 100%;
+}
+
+.Glitz .title {
+    font-weight: bold;
+}
+
+.Glitz .columns {
+    width: 100%;
+}
+
+.Glitz .price {
+    text-align: right;
+}
+
+.Glitz .columns div {
+    width: 50%;
+}
+
+.Glitz button {
+    background-color: #be1616;
+    padding: 10px;
+    border: solid 1px #be1616;
+    border-radius: 3px;
+    color: black;
 }
 
 h1 {
