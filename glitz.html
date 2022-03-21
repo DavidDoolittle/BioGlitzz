@@ -30,6 +30,7 @@
        <p class="desc">Purple Biodegradable Glitter</p>
        <button data-order="Purple-glitter">Order</button>
     </div>
+    
     <div class="Glitz">
         <img src="img/tealglitter.png" alt="purple glitter">
         <div class="columns">
@@ -53,8 +54,29 @@
 </Footer>
 </body>
 <script>
-    window.addEventListener("DOMContentLoaded", function(e) {
-        const orderButtons = document.querySelectorAll("button[data-order]");
-    });
-</script>
-</html>
+  window.addEventListener("DOMContentLoaded", function(e) {
+    const orderButtons = document.querySelectorAll("button[data-order]");
+
+    orderButtons.forEach(function(button) {
+
+        button.addEventListener("click", function(e) {
+          const button = e.currentTarget;
+          const container = button.parentNode;
+
+          const order = {
+            id: container.getAttribute("data-order"),
+            title: container.querySelector(".title").innerText,
+            price: container.querySelector(".price").innertext,
+            desc: container.querySelector(".desc").innerText
+          };
+
+          localStorage.setItem("order", JSON.stringify(order));
+
+          const url = window.location.href.replace("glitz.html", "order.html");
+
+        });
+
+     });
+   });
+ </script>
+ </html>
