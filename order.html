@@ -31,8 +31,9 @@
         }
 
         input[type="reset"] {
-            background: transparent;
-            border: 0;
+            border: solid 1px #999;
+            border-radius: 3px;
+            padding: 10px;
             text-decoration: underline;
             cursor: pointer;
         }
@@ -170,7 +171,7 @@
             desc.innerText = glitzOrder.desc;
 
             const img = glitz.querySelector("img");
-            img.setAttribute("src", `images/${glitzOrder.id}.png`);
+            img.setAttribute("src", glitzOrder.img);
             img.setAttribute("alt", glitzOrder.title);
         }
       });
