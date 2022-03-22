@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="styles.css" type="text/css" >
     <title>BioGlitz</title>
     <style>
+        
+        @media only screen and (min-width: 768px) {
+            article {
+                width: 350px;
+            }
+        }
         .input-group {
             margin-bottom: 20px;
         }
@@ -51,38 +57,38 @@
 </header>
 <main>
     <aside><img src="img/Glitter.png" alt="BioGlitz Shop"></aside>
-<article>
-    <h1>Order</h1>
+    <article>
+     <h1>Order</h1>
 
-    <div class="glitz">
-        <img src="" />
-        <div class="columns">
+        <div class="glitz">
+          <img src="" />
+          <div class="columns">
             <div class="title"></div>
             <div class="price"></div>
+          </div>
+          <p class="desc"></p>
         </div>
-        <p class="desc"></p>
-    </div>
 
-    <form action="http://localhost:7071/api/post" method="post">
+        <form action="http://localhost:7071/api/post" method="post">
 
-        <div class="input-group">
+         <div class="input-group">
           <div><label for="first-name">First Name</label></div>
           <div><input type="text" name="first-name" id="first-name" /></div>
-        </div>
+         </div>
   
-        <div class="input-group">
+         <div class="input-group">
           <div><label for="last-name">Last Name</label></div>
           <div><input type="text" name="last-name" id="last-name" /></div>
-        </div>
+         </div>
   
-        <div class="input-group">
+         <div class="input-group">
           <div><label for="address">Address</label></div>
           <div><input type="text" name="address" id="address" /></div>
-        </div>
+         </div>
 
-        <div class="input-group">
+         <div class="input-group">
           <div><label for="state">State</label></div>
-          <div>
+           <div>
               <select name="state" id="state">
                 <option value="" selected>[Select one]</option>
                 <option value="Arizona">Arizona</option>
@@ -90,25 +96,25 @@
                 <option value="Florida">Florida</option>
                 <option value="Kentucky">Kentucky</option>
               </select>
+           </div>
           </div>
-        </div>
 
-        <div class="input-group">
-          <div><label for="postal-code">Postal Code</label></div>
-          <div><input type="text" name="postal-code" id="postal-code" /></div>
-        </div>
-
-        <div class="input-group">
-          <div><label for="comments">Comments</label></div>
-          <div>
-            <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+          <div class="input-group">
+           <div><label for="postal-code">Postal Code</label></div>
+           <div><input type="text" name="postal-code" id="postal-code" /></div>
           </div>
-        </div>
 
-        <input type="reset" value="Reset" />
-        <input type="submit" value="Submit" />
+          <div class="input-group">
+           <div><label for="comments">Comments</label></div>
+           <div>
+             <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+           </div>
+          </div>
+
+         <input type="reset" value="Reset" />
+         <input type="submit" value="Submit" />
    
-    </form>
+        </form>
 </article>
 </main>
 <Footer>
@@ -122,7 +128,7 @@
 </Footer>
 </body>
     <script>
-        window.addEventListener("DOMContentLoaded", function(e) {
+       window.addEventListener("DOMContentLoaded", function(e) {
 
         const order = localStorage.getItem("order");
 
@@ -143,6 +149,6 @@
             img.setAttribute("src", `images/${glitzOrder.id}.png`);
             img.setAttribute("alt", glitzOrder.title);
         }
-        });
+      });
     </script>
 </html>
