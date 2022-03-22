@@ -53,6 +53,16 @@
     <aside><img src="img/Glitter.png" alt="BioGlitz Shop"></aside>
 <article>
     <h1>Order</h1>
+
+    <div class="glitz">
+        <img src="" />
+        <div class="columns">
+            <div class="title"></div>
+            <div class="price"></div>
+        </div>
+        <p class="desc"></p>
+    </div>
+
     <form action="http://localhost:7071/api/post" method="post">
 
         <div class="input-group">
@@ -111,4 +121,28 @@
     </nav>
 </Footer>
 </body>
+    <script>
+        window.addEventListener("DOMContentLoaded", function(e) {
+
+        const order = localStorage.getItem("order");
+
+        if (order) {
+            const glitzOrder = JSON.parse(order);
+        
+            const glitz = document.querySelector(".glitz");
+        
+            const title = glitz.querySelector(".title");
+            const price = glitz.querySelector(".price");
+            const desc = glitz.querySelector(".desc");
+
+            title.innerText = glitzOrder.title;
+            price.innerText = glitzOrder.title;
+            desc.innerText = glitzOrder.desc;
+
+            const img = glitz.querySelector("img");
+            img.setAttribute("src", `images/${glitzOrder.id}.png`);
+            img.setAttribute("alt", glitzOrder.title);
+        }
+        });
+    </script>
 </html>
