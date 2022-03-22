@@ -20,15 +20,15 @@
 <main>
     <aside><img src="img/Glitter.png" alt="BioGlitz Shop"></aside>
 <article>
-<h1>Order</h1>
-<form action="http://localhost:7071/api/post" method="post">
+    <h1>Order</h1>
+    <form action="http://localhost:7071/api/post" method="post">
 
-    <div class="input-group">
-        <div><label for="first-name">First Name</label></div>
-        <div><input type="text" name="first-name" id="first-name" /></div>
-      </div>
+        <div class="input-group">
+          <div><label for="first-name">First Name</label></div>
+          <div><input type="text" name="first-name" id="first-name" /></div>
+        </div>
   
-      <div class="input-group">
+        <div class="input-group">
           <div><label for="last-name">Last Name</label></div>
           <div><input type="text" name="last-name" id="last-name" /></div>
         </div>
@@ -39,19 +39,33 @@
         </div>
 
         <div class="input-group">
-            <div><label for="state">State</label></div>
-            <div>
-<select name="state" id="state">
-    <option value="" selected>[Select one]</option>
-    <option value="Arizona">Arizona</option>
-    <option value="California">California</option>
-    <option value="Florida">Florida</option>
-    <option value="Kentucky">Kentucky</option>
-</select>
+          <div><label for="state">State</label></div>
+          <div>
+              <select name="state" id="state">
+                <option value="" selected>[Select one]</option>
+                <option value="Arizona">Arizona</option>
+                <option value="California">California</option>
+                <option value="Florida">Florida</option>
+                <option value="Kentucky">Kentucky</option>
+              </select>
+          </div>
+        </div>
 
-            </div>
+        <div class="input-group">
+          <div><label for="postal-code">Postal Code</label></div>
+          <div><input type="text" name="postal-code" id="postal-code" /></div>
+        </div>
 
-</form>
+        <div class="input-group">
+          <div><label for="comments">Comments</label></div>
+          <div>
+          <textarea name="comments" id="comments" cols="45" rows="10"></textarea>
+        </div>
+
+        <input type="reset" value="Reset" />
+        <input type="submit" value="Submit" />
+
+    </form>
 </article>
 </main>
 <Footer>
